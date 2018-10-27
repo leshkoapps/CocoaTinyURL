@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CocoaTinyURL : NSObject
 
++ (instancetype)sharedInstance;
+
+- (NSURLSessionDataTask *)makeTinyURL:(NSURL *)url completion:(void (^)(NSURL * _Nullable tinyURL, NSError * _Nullable error))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END
