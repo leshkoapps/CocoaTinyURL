@@ -33,7 +33,7 @@
     if(self){
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         configuration.allowsCellularAccess = YES;
-        configuration.timeoutIntervalForRequest = 30.0;
+        configuration.timeoutIntervalForRequest = 5.0;
         self.session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
     }
     return self;
@@ -52,7 +52,7 @@
         }
     }
     NSString *urlEncodedParam = [self urlEncodeString:url.absoluteString];
-    NSString *urlStr = [NSString stringWithFormat:@"http://tinyurl.com/api-create.php?url=%@",urlEncodedParam];
+    NSString *urlStr = [NSString stringWithFormat:@"http://tinyurl.com/api-create.php?source=indexpage&url=%@",urlEncodedParam];
     NSURL *requestURL = [NSURL URLWithString:urlStr];
     NSURLSessionDataTask *task = [self.session dataTaskWithURL:requestURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSURL *tinyURL = nil;
