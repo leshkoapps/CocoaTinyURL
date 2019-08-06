@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "CocoaTinyURL"
   s.version      = "1.0.0"
+  s.summary      = "Wrapper for https://tinyurl.com"
   s.homepage     = "https://github.com/leshkoapps/CocoaTinyURL"
   s.license      = 'MIT'
   s.author       = { "Artem" => "support@everappz.com" }
