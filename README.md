@@ -16,7 +16,7 @@
  
  support@everappz.com
  
- http://everappz.com/index.php/support/
+ http://everappz.com/support/
  
 # License
 
